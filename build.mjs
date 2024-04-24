@@ -1,7 +1,11 @@
 import fs from 'fs'
 
 
-const css = fs.readFileSync('src.css').toString()
+function rfs(path) {
+    return fs.readFileSync(path).toString()
+}
+
+const css = rfs('src.css')
     .replaceAll(/\r?\n( +|\t)?/g, '')
     .replaceAll(/;}/g, '}')
     .replaceAll(/\s+{/g, '{')
@@ -18,12 +22,12 @@ function buildJS(input) {
         .replaceAll(/;($|})/g, '')
 }
 
-const evalJs = buildJS(fs.readFileSync('src.eval.js').toString())
-const js = buildJS(fs.readFileSync('src.try.js').toString())
+const evalJs = buildJS(rfs('src.eval.js'))
+const js = buildJS(rfs('src.try.js'))
     .replace('"{{src.eval.js}}"', JSON.stringify(evalJs))
 
 
-const html = fs.readFileSync('src.html').toString()
+const html = rfs('src.html')
     .replaceAll(/="([\w\.\-]+)" ?/g, '=$1 ')
     .replaceAll(/(?<=style="\S+:) (?=\S+" ?)/g, '')
     .replaceAll(/(style=".+);"/g, '$1"')
