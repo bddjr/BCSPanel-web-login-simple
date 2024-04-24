@@ -1,0 +1,18 @@
+* {
+    color-scheme: {
+            {
+            .colorScheme
+        }
+    }
+}
+
+body {
+    margin: 32px;
+}
+
+input:not(#isregister) {
+    display: block;
+    margin: 14px 0;
+    height: 28px;
+    width: 280px;
+}

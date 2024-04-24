@@ -1,0 +1,36 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<link href="data:," rel="icon" />
+	<meta content="width=device-width,initial-scale=1.0" name="viewport" />
+	<title>BCSPanel</title>
+	<!--{{src.css}}-->
+</head>
+
+<body>
+	<h2 id="h2">Login BCSPanel</h2>
+	<form style="display: none" id="form" method="post">
+		<input style="display: none" type="checkbox" name="secure" id="secure" />
+
+		<input type="checkbox" name="isregister" id="isregister" {{.isreg}} />
+		<label for="isregister">Register</label>
+
+		<input placeholder="User Name" type="text" id="username" name="username" autocomplete="username"
+			maxlength="32" />
+		<input placeholder="Password" type="password" id="password" name="password" autocomplete="current-password"
+			maxlength="128" />
+		<input placeholder="Repeat Your Password" type="password" id="repeat_password" name="repeat_password"
+			maxlength="128" autocomplete="off" />
+		<input placeholder="Verify Code" type="text" id="verification_code" name="verification_code" maxlength="16"
+			autocomplete="off" />
+
+		<p style="color: red">{{.err}}</p>
+
+		<button style="font-size: 20px;" id="submit" type="submit">Submit</button>
+	</form>
+	<!--{{src.try.js}}-->
+</body>
+
+</html>
