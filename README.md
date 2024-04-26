@@ -1,6 +1,4 @@
-BCSPanel 的登录页面极简版，自研构建脚本，构建后体积仅 `1484 B` 。
-
-仅出现特殊情况（例如更改浏览器版本要求）才会更新这个项目。
+BCSPanel 的登录页面极简版，自研构建脚本，构建后体积仅 `1437 B` 。
 
 浏览器版本要求请看 https://bcspanel-web-login-preview.bddjr.com/login/ie/
 
