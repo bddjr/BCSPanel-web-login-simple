@@ -14,7 +14,7 @@
 	<form style="display: none" id="form" method="post">
 		<input style="display: none" type="checkbox" name="secure" id="secure" />
 
-		<input type="checkbox" name="isregister" id="isregister" {{.isreg}} />
+		<input type="checkbox" name="isregister" id="isregister" {{if .IsReg}}checked{{end}} />
 		<label for="isregister">Register</label>
 
 		<input placeholder="User Name" type="text" id="username" name="username" autocomplete="username"
@@ -26,7 +26,7 @@
 		<input placeholder="Verify Code" type="text" id="verification_code" name="verification_code" maxlength="16"
 			autocomplete="off" />
 
-		<p style="color: red">{{.err}}</p>
+		<p style="color: red">{{.Err}}</p>
 
 		<input type="submit"></input>
 	</form>
