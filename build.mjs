@@ -19,7 +19,7 @@ function buildJS(input) {
         .replaceAll(/\s+([=?:{}()]|=>)/g, '$1')
         .replaceAll(/([=?:{}()]|=>)\s+/g, '$1')
         .replaceAll(/[\r\n\t]/g, '')
-        .replaceAll(/;($|})/g, '')
+        .replaceAll(/;($|})/g, '$1')
 }
 
 const evalJs = buildJS(rfs('src.eval.js'))

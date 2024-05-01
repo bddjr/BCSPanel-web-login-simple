@@ -1,3 +1,5 @@
 {
-    "css.validate": false
+    "css.validate": false,
+    "javascript.format.semicolons": "insert",
+    "editor.formatOnSave": true
 }
